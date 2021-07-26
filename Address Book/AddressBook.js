@@ -1,8 +1,9 @@
 /**
- * UC 1 : Ability to create a Address Book
- *        Contact with first and last names,
- *        address, city, state, zip, phone number
- *        and email...
+ * UC 2 : Ability to ensure Valid Contacts are added.
+ *        - First Name and Last Name should start with Capital and Minimum 3 Characters
+ *        - Address, City and State should also have minimum 4 characters
+ *        - Zip, Phone and Email should be valid as done in the Pattern Exercise
+ *        - Throw Error if the RegEx test fails
  * 
  * @author Krunal Lad
  * @since 26-07-2021
@@ -12,30 +13,19 @@
 const ContactDetails = require("./ContactDetails.js");
 const prompt = require('prompt-sync')();
 
-// ability to add details to ContactDetails class
-var contactInfo = new ContactDetails("Krunal","Lad","Dahanu","Mumbai","Maharshtra","405605","8975466584"
-                  ,"kunallad6789@yahoo.com");
-
-console.log(contactInfo.toString());
-
-
-contactInfo.firstName = "Rahul";
-contactInfo.lastName = "Sharma";
-contactInfo.address = "Dadra";
-contactInfo.city = "Dadra";
-contactInfo.state = "Gujarat";
-contactInfo.zip = "456895";
-contactInfo.phoneNumber = "9875658624";
-contactInfo.email = "rahulsharma34@gmail.com";
-console.log(contactInfo.toString());
 
 //Ability to add user-defined values to the PersonInfoData
-contactInfo.firstName = prompt("Enter First Name : "); 
-contactInfo.lastName = prompt("Enter Last Name : "); 
-contactInfo.address = prompt("Enter Address : "); 
-contactInfo.city = prompt("Enter City : "); 
-contactInfo.state = prompt("Enter State : "); 
-contactInfo.zip = prompt("Enter Zip : "); 
-contactInfo.phoneNumber = prompt("Enter Phone Number : "); 
-contactInfo.email = prompt("Enter Email : "); 
-console.log(contactInfo.toString());
+try {
+    let contactInfo = new ContactDetails();
+    contactInfo.fName = prompt("Enter First Name : ");
+    contactInfo.lName = prompt("Enter Last Name : ");
+    contactInfo.addressName = prompt("Enter Address : ");
+    contactInfo.cityName = prompt("Enter City : ");
+    contactInfo.stateName = prompt("Enter State : ");
+    contactInfo.zipNumber = prompt("Enter Zip : ");
+    contactInfo.phoneNo = prompt("Enter Phone Number : ");
+    contactInfo.emailID = prompt("Enter Email : ");
+    console.log(contactInfo.toString());
+} catch (e) {
+    console.error(e);
+}
