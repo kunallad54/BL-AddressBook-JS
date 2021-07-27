@@ -1,7 +1,5 @@
 /**
- * UC 7 : Ability to ensure there is no Duplicate Entry of the same
- *        Person in the Address Book - Duplicate Check is done on Person Name
- *        before adding person to Address Book.
+ * UC 8 : Ability to search Person in a particular City or State
  *
  * 
  * @author Krunal Lad
@@ -41,6 +39,10 @@ while (flag) {
             console.log();
             break;
         case 6:
+            addressBookService.searchContact(contactInfoList);
+            console.log();
+            break;
+        case 7:
             console.log("EXITED !!!");
             flag = false;
             break;
