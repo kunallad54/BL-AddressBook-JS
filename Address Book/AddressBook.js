@@ -1,6 +1,6 @@
 /**
- * UC 11 : Ability to sort the entries in the address book by 
- *         Person's Name
+ * UC 12 : Ability to sort the entries in the address book by 
+ *         Person's Name,City,State or zip
  *
  * 
  * @author Krunal Lad
