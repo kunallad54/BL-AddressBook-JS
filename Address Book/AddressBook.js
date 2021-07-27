@@ -1,5 +1,6 @@
 /**
- * UC 9 : Ability to view Persons by City or State
+ * UC 10 : Ability to get number of contact persons i.e.
+ *         count by City or State
  *
  * 
  * @author Krunal Lad
