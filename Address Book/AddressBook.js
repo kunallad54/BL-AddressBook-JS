@@ -1,6 +1,6 @@
 /**
- * UC 4 : Ability to find existing contact
- *        person using their name and edit it
+ * UC 5 : Ability to find a person with name 
+ *        delete it from the array
  * 
  * @author Krunal Lad
  * @since 27-07-2021
@@ -31,6 +31,10 @@ while (flag) {
             contactInfoList = addressBookService.editContact(contactInfoList, fName);
             break;
         case 4:
+            let pName = prompt("Enter the first Name to delete Contact details : ");
+            contactInfoList = addressBookService.deleteContact(contactInfoList,pName);
+            break;
+        case 5:
             console.log("EXITED !!!");
             flag = false;
             break;
