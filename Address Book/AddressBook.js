@@ -1,5 +1,5 @@
 /**
- * UC 8 : Ability to search Person in a particular City or State
+ * UC 9 : Ability to view Persons by City or State
  *
  * 
  * @author Krunal Lad
