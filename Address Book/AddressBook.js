@@ -1,12 +1,13 @@
 /**
- * UC 3 : Ability to create a New Address Book 
- *        array and add new Contacts to it
+ * UC 4 : Ability to find existing contact
+ *        person using their name and edit it
  * 
  * @author Krunal Lad
  * @since 27-07-2021
  */
 
 // importing another class file to this class file
+const prompt = require('prompt-sync')();
 const UserInputOutput = require("./UserInputOutput.js");
 const AddressBookService = require("./AddressBookService.js");
 
@@ -26,6 +27,10 @@ while (flag) {
             console.log(contactInfoList);
             break;
         case 3:
+            let fName = prompt("Enter the first Name to edit Contact details : ");
+            contactInfoList = addressBookService.editContact(contactInfoList, fName);
+            break;
+        case 4:
             console.log("EXITED !!!");
             flag = false;
             break;
