@@ -32,7 +32,7 @@ class ContactDetails {
      * @param {any} firstName
      */
     set fName(firstName) {
-        let regex = RegExp('^[A-Z]{1}[a-z]{3,}$');
+        let regex = RegExp('^[A-Z]{1}[a-z]{2,}$');
         if (regex.test(firstName)) {
             this.firstName = firstName;
         }
@@ -48,7 +48,7 @@ class ContactDetails {
      * @param {any} lastName
      */
     set lName(lastName) {
-        let regex = RegExp('^[A-Z]{1}[a-z]{3,}$');
+        let regex = RegExp('^[A-Z]{1}[a-z]{2,}$');
         if (regex.test(lastName)) {
             this.lastName = lastName;
         }
@@ -129,7 +129,7 @@ class ContactDetails {
      * @param {string} phoneNumber
      */
     set phoneNo(phoneNumber) {
-        let regex = RegExp('^(0|91)?[\\s][0-9]{10}$');
+        let regex = RegExp("(0|91)?[7-9][0-9]{9}");
         if ( regex.test( phoneNumber )) {
             this.phoneNumber = phoneNumber;
         }
