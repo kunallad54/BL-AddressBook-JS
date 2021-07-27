@@ -1,6 +1,8 @@
 /**
- * UC 6 : Ability to find  number of contacts
- *        in the address book
+ * UC 7 : Ability to ensure there is no Duplicate Entry of the same
+ *        Person in the Address Book - Duplicate Check is done on Person Name
+ *        before adding person to Address Book.
+ *
  * 
  * @author Krunal Lad
  * @since 27-07-2021
