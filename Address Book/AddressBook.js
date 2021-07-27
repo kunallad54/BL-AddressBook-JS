@@ -1,6 +1,6 @@
 /**
- * UC 10 : Ability to get number of contact persons i.e.
- *         count by City or State
+ * UC 11 : Ability to sort the entries in the address book by 
+ *         Person's Name
  *
  * 
  * @author Krunal Lad
@@ -44,6 +44,10 @@ while (flag) {
             console.log();
             break;
         case 7:
+            addressBookService.sortContact(contactInfoList);
+            console.log();
+            break;
+        case 8:
             console.log("EXITED !!!");
             flag = false;
             break;

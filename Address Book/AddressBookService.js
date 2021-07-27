@@ -144,7 +144,7 @@ class AddressBookService {
                         count++;
                     }
                 });
-                console.log("Total person from same city are : "+count);
+                console.log("Total person from same city are : " + count);
                 break;
             case 2:
                 let state = prompt("Enter the State Name : ");
@@ -154,14 +154,41 @@ class AddressBookService {
                         count++;
                     }
                 });
-                console.log("Total person from same state are : "+count);
+                console.log("Total person from same state are : " + count);
                 break;
             default:
                 console.log("You have entered invalid input!");
                 break;
         }
+
     }
 
+    /**
+     * Purpose : To sort the contact detials alphabetically by Person's Name
+     * 
+     * @param {*} contactInfoList 
+     */
+    sortContact(contactInfoList) {
+        console.log("Press 1 to sort the Address Book by First Name");
+        
+        let userChoice = parseInt(prompt("Enter your choice : "));
+
+        switch (userChoice) {
+            case 1:
+                contactInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.fName < b.fName ? -1 : 1;
+                });
+                console.log(contactInfoList);
+                break;
+            
+            default:
+                console.log("You have entered invalid input!");
+                break;
+        }
+    }
 }
 
 module.exports = AddressBookService;
